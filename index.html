@@ -3,20 +3,59 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>This Is frist website on github</title>
-	<style type="text/css">
-		.img{
-				background-size: 100%;
-
-		}
-	</style>
-</head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
 <body>
-	<h1>This is First Page in my website</h1>
-	<p>Adding Somethisng</p>
-	<div>
-		<img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?cs=srgb&dl=pexels-simon-berger-1266810.jpg&fm=jpg">
+	<div class="mdiv">
+		<div class="navbar">
+
+			<ul class="menu">
+				<li><a href="" class="anker">Home</a></li>
+				<li><a href="" class="anker">Content</a></li>
+				<li><a href="" class="anker">Services</a></li>
+				<li><a href="" class="anker">About</a></li>
+			</ul>
+		
+		</div>
+		<div class="lgnform">
+			<div class=lgn >
+				<h2 align="center" >LOGIN</h2>
+				<form loginform>
+					<input type="text" placeholder="User Name" id="uname" required pattern="[a-z,A-z,1-9]{10}" />
+					<input type="Password" name="Password" placeholder="Password" id="pass" required pattern="[1-9]{8}"/><br><br>
+					<p id="status"></p>
+					<span> <a href="#">Forgot Password !</a></span>
+					<div align="center">
+						<input type="button" name="lgn" value="LOGIN" onclick="valid()">
+					</div>
+					<p><a href="Forms.html"> Create Account</a></p>
+				</form>
+			</div>
+		</div>
+		<div class="img">
+			<h1 style="margin-top: 30px; color: #4B0082; font-family: sans-serif;" align="center">Shivaji University</h1>
+			<p align="center" style="color:#4B0082">Shivaji University,  eestablished in 1962, is a state university located at Kolhapur, Maharashtra, India.</p>
+		</div>
+		
 	</div>
-	
+	<script type="text/javascript">
+			
+			function valid(){
+				let usn1='Rutwik@123'
+				let pass1='Rutwik@123'
+				let usn2=document.getElementById('uname').value;
+				let pass2=document.getElementById('pass').value;
+
+				if(usn1==usn2 && pass1==pass2)
+				{
+					open('HomePage.html')
+				}
+				else
+				{
+					alert("Wrong User Name And Password")
+				}
+			}
+	</script>
 </body>
 </html>
